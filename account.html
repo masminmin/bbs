@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/elusive-webfont.css">
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+	<div class="navbar navbar-static-top">
+		<div class="navbar-inner">
+	    	<div class="container">
+	    		<a class="brand" href="#">凯盛软件</a>
+			    <ul class="nav pull-right">
+			      <li><a href="home.html"><i class="icon-home"></i> 首页</a></li>
+			      <li><a href="workflow.html"><i class="icon-fork"></i> 工作流</a></li>
+			      <li><a href="account.html"><i class="icon-user"></i> fankay</a></li>
+			    </ul>
+	    	</div>
+		</div>
+	</div>
+
+	<div class="container content">
+		<a href="home.html" class="pull-right btn"><i class="icon-share-alt"></i> Go back</a>
+	</div>
+
+	<div class="container content main">
+		<form class="form-horizontal fm">
+			<legend>账号设置</legend>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">昵称</label>
+			    <div class="controls">
+			      <input type="text" class="span4" value="fankay" disabled="disabled">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">真实姓名</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">电子邮件</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">个人签名</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">QQ</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">Twitter</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">Github</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">新浪微博</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">个人主页</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">所在地</label>
+			    <div class="controls">
+			      <select name="" id="" class="span2">
+			      	<option value="">省份</option>
+			      </select>
+			      <select name="" id="" class="span2">
+			      	<option value="">城市</option>
+			      </select>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button class="btn">保存设置</button>
+				</div>
+			</div>
+			<legend>头像设置</legend>
+			<img src="http://www.gravatar.com/avatar/f2cc57f80c54ab26644fefa9c0c58337?s=80&d=mm&r=g" alt="" class="img-circle">
+			头像服务采用<a href="http://en.gravatar.com/">Gravatar</a>服务，请到该站点进行设置
+		</form>
+
+		<form class="form-horizontal fm">
+			<legend>密码设置</legend>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">原密码</label>
+			    <div class="controls">
+			      <input type="password" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">新密码</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+			    <label class="control-label" for="inputEmail">确认密码</label>
+			    <div class="controls">
+			      <input type="text" class="span4">
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button class="btn">保存密码</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	
+	<footer class="container">
+		©2013 凯盛软件
+	</footer>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js//jquery.autosize-min.js"></script>
+	<script src="static/js/markdown.js"></script>
+	<script>
+		$(function(){
+			$('#content').autosize(); 
+			$(".sender").click(function(){
+				var src = $("#content").val();
+				var md = markdown.toHTML(src);
+				$(".preview").html(md);
+			});
+		});
+	</script>
+</body>
+</html>

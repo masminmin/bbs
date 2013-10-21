@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/elusive-webfont.css">
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+	<div class="navbar navbar-static-top">
+		<div class="navbar-inner">
+	    	<div class="container">
+	    		<a class="brand" href="#">凯盛软件</a>
+			    <ul class="nav pull-right">
+			      <li><a href="home.html"><i class="icon-home"></i> 首页</a></li>
+			      <li><a href="workflow.html"><i class="icon-fork"></i> 工作流</a></li>
+			      <li><a href="account.html"><i class="icon-user"></i> fankay</a></li>
+			    </ul>
+	    	</div>
+		</div>
+	</div>
+
+	<div class="container content">
+		<a href="home.html" class="pull-right btn"><i class="icon-share-alt"></i> Go back</a>
+	</div>
+
+	<div class="container content" style="min-height:400px">
+		<div class="row">
+			<div class="span3">
+				<div class="widget" style="min-height:400px">
+					<h3><i class="icon-list-alt"></i> 新建工作流</h3>
+					<ul class="unstyled card">
+						<li>
+							<i class="icon-smiley-alt pull-left"></i>
+							<button class="btn btn-mini pull-right" id="holidaybtn">申请</button>
+							<div>
+								<p>请假工作流</p>
+							</div>
+							<div class="clearfix"></div>
+						</li>
+						<li>
+							<i class="icon-credit-card pull-left"></i>
+							<button class="btn btn-mini pull-right">申请</button>
+							<div>
+								<p>退费工作流</p>
+							</div>
+							<div class="clearfix"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="span9">
+				<div class="widget" id="workflow_table" style="min-height:400px">
+					<h3><i class="icon-tasks"></i> 我的工作流</h3>
+					<table class="table">
+						<thead>
+							<tr>
+								<th width="50" style="padding-left:15px">#</th>
+								<th width="200">申请日期</th>
+								<th>类别</th>
+								<th width="100">当前状态</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="padding-left:15px">1</td>
+								<td>2013年04月08日</td>
+								<td><a href="#">请假工作流</a></td>
+								<td>
+									<span class="label label-success">成功</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding-left:15px">2</td>
+								<td>2013年04月08日</td>
+								<td><a href="#">请假工作流</a></td>
+								<td>
+									<span class="label label-important">失败</span>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding-left:15px">3</td>
+								<td>2013年04月08日</td>
+								<td><a href="#">请假工作流</a></td>
+								<td>
+									<span class="label label-info">审批中</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="widget hide" id="workflow-form" style="min-height:400px">
+					<h3><i class="icon-smiley-alt"></i> 请假工作流</h3>
+					<form action="#" class="fm">
+						<label>请假日期 <small><a href="javascript:;">多日</a></small></label>
+						<input type="text" name="" id="">
+						<label>事由</label>
+						<textarea rows="5" class="span5"></textarea>
+						<br/>
+						<button class="btn btn-success">申请</button>
+						<button type="button" class="btn" id="holiday-cancel">取消</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	
+	<footer class="container">
+		©2013 凯盛软件
+	</footer>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js//jquery.autosize-min.js"></script>
+	<script src="static/js/markdown.js"></script>
+	<script>
+		$(function(){
+			$('#content').autosize(); 
+			$("#holidaybtn").click(function(){
+				$("#workflow_table").fadeOut(200,function(){
+					$("#workflow-form").fadeIn(200);	
+				});
+			});
+			$("#holiday-cancel").click(function(){
+				$("#workflow-form").fadeOut(200,function(){
+					$("#workflow_table").fadeIn(200);	
+				});
+			});
+		});
+	</script>
+</body>
+</html>
